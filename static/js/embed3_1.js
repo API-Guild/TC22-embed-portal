@@ -1,12 +1,16 @@
 // fires when all html css and images are loaded, but doesn't wait for iframe content
 window.onload = function () {
-   viz = document.getElementById('tableauViz');
-   console.log(viz);
-   // call the ready() function when the tableau iframe is ready to interact with and fully loaded
+  // Lesson 3_1
+  // find the document element with the id tableauViz
+  // set this to an object called viz - just as Lesson 1
+   
+  //viz = document.getElementById('tableauViz');
+    
+  // call the ready() function when the tableau iframe is ready to interact with and fully loaded
    viz.addEventListener("firstinteractive", ready);
    }
 
-// called when the tableau iframe content has chnged and is ready to interact with
+// called when the tableau iframe content has changed and is ready to interact with
 function ready() {
   console.log("Viz has loaded!");
   activeSheet = viz.workbook.activeSheet;
@@ -19,11 +23,16 @@ function ready() {
 function change_viz(url) {
   // siply set the src to the new sheet and it will render in the existing container/object
   // if onfirst interactive is set then it will trigger this again when the new src has loaded
-    viz.src = url;
+  // Lession 3_1
+  // set the source property of the viz object to the new url
+  
+  // viz.src = url;
 }
 
 // revert all
 function revertAll() {
+  // NB these functions no longer need the viz object setting
+  //   as we're setting this when the view loads initially
   viz.revertAllAsync();
 }
 // undo last action
