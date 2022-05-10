@@ -75,18 +75,18 @@ def getJWT():
         print(username)
         CA_SSO_token = jwt.encode(
             {
-                "iss": '',
+                "iss": '4063aef9-f1ef-4dac-87bc-06a05f21a64b',
                 "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=10),
                 "jti": str(uuid.uuid4()),
                 "aud": "tableau",
                 "sub": username,
                 "scp": ["tableau:views:embed", "tableau:metrics:embed"]
             },
-            '0/oP45C+hQ8YY8+EZs/I6+SbTCU+BVYnlimq7fkRHk0=',
+            'PBBgI0D9Pe0inqNf+nHy/K6Ytv8mP06bjkcoOtfx6Lk=',
             algorithm="HS256",
             headers={
-                'kid': '',
-                'iss': ''
+                'kid': 'df4b89a3-7761-4053-9e4f-77958e00e18f',
+                'iss': '4063aef9-f1ef-4dac-87bc-06a05f21a64b'
             }
         )
 

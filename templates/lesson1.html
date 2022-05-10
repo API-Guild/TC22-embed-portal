@@ -286,13 +286,12 @@
                 <div class="card-body flex-column">
                   <div id="vizContainer">
                     <!-- Lesson 1 -->
-                    <!-- Create your tableau-viz component here -->
-                    <!-- set the id to tableauViz -->
-                    
-                    <!--<tableau-viz id="tableauViz"
+                    <!-- This is the tableau-viz component -->
+                    <!-- Please hide the toolbar -->  
+                    <tableau-viz id="tableauViz"
                       src= "{{tabServer + '/views/tc_viz/MyTCDash'}}"
-                        device="desktop" toolbar="hidden" hide-tabs width=100%>
-                    </tableau-viz>-->
+                        device="desktop" toolbar="top" hide-tabs width=100%>
+                    </tableau-viz>
 
 
                   </div>
