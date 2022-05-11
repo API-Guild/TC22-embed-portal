@@ -4,8 +4,7 @@ window.onload = function () {
   // find the document element with the id tableauViz
   // set this to an object called viz - just as Lesson 1
    
-  //viz = document.getElementById('tableauViz');
-    
+      
   // call the ready() function when the tableau iframe is ready to interact with and fully loaded
    viz.addEventListener("firstinteractive", ready);
    }
@@ -21,12 +20,13 @@ function ready() {
 
 //sheet switching
 function change_viz(url) {
-  // siply set the src to the new sheet and it will render in the existing container/object
-  // if onfirst interactive is set then it will trigger this again when the new src has loaded
+  // simply set the src to the new sheet and it will render in the existing container/object
+  // if on first interactive is set then it will trigger this again when the new src has loaded
+  
   // Lession 3_1
   // set the source property of the viz object to the new url
+    
   
-  // viz.src = url;
 }
 
 // revert all
