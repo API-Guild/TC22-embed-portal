@@ -23,10 +23,10 @@ function change_viz(url) {
   // simply set the src to the new sheet and it will render in the existing container/object
   // if on first interactive is set then it will trigger this again when the new src has loaded
   
-  // Lession 3_1
+  // Lesson 3_1
   // set the source property of the viz object to the new url
     
-  
+
 }
 
 // revert all
