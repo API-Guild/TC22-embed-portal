@@ -33,6 +33,12 @@ function ready() {
                 console.log('Found the sheet I need for filter: ', activeFilterSheet.name)
                 // now let's find all the filters on this sheet
                 worksheets[i].getFiltersAsync().then(getFilters);
+                // Lesson 3_3
+                // Just like in the filtering examples, we need to know which sheet 
+                //    we're going to make selections on. 
+                // To keep things simple, we're going to use Sale Map again 
+                // Nothing to do here, just notice we're creating "activeSelectSheet"
+                //    to use later on in our code
                 activeSelectSheet = worksheets[i];
                 console.log('Found the sheet I need for selecting: ', activeSelectSheet.name)
                 break;
@@ -88,10 +94,16 @@ function domain(filterValues) {
 }
 
 function selectTableau(fieldName, value, action = "select-replace") {
-    activeSelectSheet.selectMarksByValueAsync([{
-        fieldName: fieldName,
-        value: value
-    }], action );
+  // Lesson 3_3
+  // we need to create the call to the method to apply our selections. 
+  // the syntax is a little tricker than the filter examples as we need to create 
+  // a SelectionCriteria Array first
+  // this link will explain it. HINT: there is a handy example at the bottom of the page!
+  // https://help.tableau.com/current/api/embedding_api/en-us/reference/interfaces/worksheet.html#selectmarksbyvalueasync
+
+
+
+  
 }
 
 function selectClear() {

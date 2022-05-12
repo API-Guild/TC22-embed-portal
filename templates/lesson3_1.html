@@ -19,7 +19,7 @@
   <!-- Custom styles for this template-->
   <link href="static/css/sb-admin-2.css" rel="stylesheet">
 
-  <script type="module" src="https://10ax.online.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
+  <script type="module" src="http://localhost:8000/javascripts/api/tableau.embedding.3.latest.js"></script>
   <script src="static/js/embed3_1.js"></script>
   <!--<script type="text/javascript" src="static/js/embed.js"> </script>-->
   <!-- Exercise #01a-->
@@ -317,7 +317,7 @@
                 <div class="card-body flex-column">
                   <div id="vizContainer">
                     <tableau-viz id="tableauViz"
-                      src= "{{tabServer + '/views/tc_viz/Original'}}"
+                      src= "{{tabServer + '/views/tc_viz/MyTCDash'}}"
                         device="desktop" toolbar="hidden" hide-tabs width="1000px">
                     </tableau-viz>
                   </div>
