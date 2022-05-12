@@ -117,9 +117,9 @@
         <div id="collapseMarks" class="collapse" aria-labelledby="headingMarks" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Select Mark:</h6>
-            <a class="collapse-item" href="#" onclick="selectTableau('State',['New York','Pennsylvania','Virginia'])">East</a>
-            <a class="collapse-item" href="#" onclick="selectTableau('State',['Kansas','Texas','Nebraska'])">Central</a>
-            <a class="collapse-item" href="#" onclick="selectTableau('State',['Nevada','California'])">West</a>
+            <a class="collapse-item" href="#" onclick="selectTableau('State',['West Virginia','Virginia','Vermont','Tennessee','South Carolina','Rhode Island','Pennsylvania','Ohio','North Carolina','New York','New Jersey','New Hampshire','Michigan','Massachusetts','Maryland','Kentucky','Indiana','Georgia','Florida','District of Columbia','Delaware','Connecticut','Alabama'])">East</a>
+            <a class="collapse-item" href="#" onclick="selectTableau('State',['Wisconsin','Texas','South Dakota','Oklahoma','North Dakota','Nebraska','Missouri','Mississippi','Minnesota','Louisiana','Kansas','Iowa','Illinois','Arkansas'])">Central</a>
+            <a class="collapse-item" href="#" onclick="selectTableau('State',['Washington','Utah','Oregon','New Mexico','Nevada','Montana','Idaho','Colorado','California','Arizona'])">West</a>
             <a class="collapse-item" href="#" onclick="selectClear()">Clear Selections</a>
           </div>
         </div>
@@ -362,7 +362,7 @@
                   <div id="vizContainer">
                     <tableau-viz id="tableauViz"
                       src= "{{tabServer + '/views/tc_viz/MyTCDash'}}"
-                        device="desktop" toolbar="hidden" hide-tabs width="1000px">
+                        device="desktop" toolbar="hidden" hide-tabs width="100%">
                     </tableau-viz>
                   </div>
                   <div id='eventMark'></div>
@@ -386,7 +386,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+            <span>Copyright &copy; TC 2022</span>
           </div>
         </div>
       </footer>
