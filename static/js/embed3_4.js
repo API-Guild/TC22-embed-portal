@@ -4,8 +4,16 @@ window.onload = function () {
    console.log(viz);
    // call the ready() function when the tableau iframe is ready to interact with and fully loaded
    viz.addEventListener("firstinteractive", ready);
-   viz.addEventListener("markselectionchanged", getSelectedMarks);
-   }
+
+   // Lesson 3_4
+   // We need to add an event listener to the viz
+   // This is just like the event listener just above which fires when the viz has loaded
+   // this time we'll use "marksselectionchanged"
+   // and we want to fire the function getSelectedMarks
+
+   
+   
+  }
 
 // called when the tableau iframe content has chnged and is ready to interact with
 function ready() {
@@ -89,7 +97,10 @@ function domain(filterValues) {
 }
 
 function getSelectedMarks(marksEvent) {
-   return marksEvent.detail.getMarksAsync().then(reportSelectedMarks);
+  // Lesson 3_4
+  // Once you select a mark,the event lisener fires, and calls this function
+  // nothing to type, but follow the flow of the code from here to see what it does
+  return marksEvent.detail.getMarksAsync().then(reportSelectedMarks);
 }
 function reportSelectedMarks(marks)
     {

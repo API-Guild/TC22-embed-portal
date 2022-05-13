@@ -57,7 +57,12 @@ function getFilters(filters)
             {
             // if filter type is categorical do this
             case 'categorical':
-              if (filter.fieldName == "Category")
+              // Lesson 3_2_3
+              // We've reached the point where we need to get values for the specific filter
+              // Check out the filters on the Sales Map in Tableau 
+              // We've already used Region, and Order Date is not a categorical filter
+              // So set the if statement to the remaining filter below
+              if (filter.fieldName == "")
               {
                 console.log("Get Category Filter");
                 // get all the values the filter could take to display in the web page dynamically

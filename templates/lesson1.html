@@ -19,7 +19,7 @@
   <!-- Custom styles for this template-->
   <link href="static/css/sb-admin-2.css" rel="stylesheet">
 
-  <script type="module" src="https://10ax.online.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
+  <script type="module" src="http://localhost:8000/javascripts/api/tableau.embedding.3.latest.js"></script>
   <script src="static/js/embed1.js"></script>
 
 
@@ -285,10 +285,15 @@
 
                 <div class="card-body flex-column">
                   <div id="vizContainer">
+                    <!-- Lesson 1 -->
+                    <!-- This is the tableau-viz component -->
+                    <!-- Please hide the toolbar -->  
                     <tableau-viz id="tableauViz"
                       src= "{{tabServer + '/views/tc_viz/MyTCDash'}}"
-                        device="desktop" toolbar="hidden" hide-tabs width=100%>
+                        device="mobile" toolbar="top" hide-tabs width=100%>
                     </tableau-viz>
+
+
                   </div>
 
                   </div>

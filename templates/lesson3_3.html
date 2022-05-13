@@ -19,7 +19,7 @@
   <!-- Custom styles for this template-->
   <link href="static/css/sb-admin-2.css" rel="stylesheet">
 
-  <script type="module" src="https://10ax.online.tableau.com/javascripts/api/tableau.embedding.3.latest.js"></script>
+  <script type="module" src="http://localhost:8000/javascripts/api/tableau.embedding.3.latest.js"></script>
   <script src="static/js/embed3_3.js"></script>
 
 
@@ -67,9 +67,9 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="#" onclick="change_viz('http://ec2amaz-3vvgq8g:8080/views/tc_viz/Original');"><i class="fas fa-fw fa-image"></i><span>My TC Dash</span></a>
-            <a class="collapse-item" href="#" onclick="change_viz('http://ec2amaz-3vvgq8g:8080/views//tc_viz/SalesMap');"><i class="fas fa-fw fa-image"></i><span>Sales Map</span></a>
-            <a class="collapse-item" href="#" onclick="change_viz('http://ec2amaz-3vvgq8g:8080/views//Superstore/Forecast');"><i class="fas fa-fw fa-image"></i><span>Superstore</span></a>
+            <a class="collapse-item" href="#" onclick="change_viz('http://localhost:8000/views/tc_viz/MyTCDash');"><i class="fas fa-fw fa-image"></i><span>TC Dash</span></a>
+            <a class="collapse-item" href="#" onclick="change_viz('http://localhost:8000/views/tc_viz/SalesMap');"><i class="fas fa-fw fa-image"></i><span>Sales Map</span></a>
+            <a class="collapse-item" href="#" onclick="change_viz('http://localhost:8000/views/Regional/GlobalTemperatures');"><i class="fas fa-fw fa-image"></i><span>Temperatures</span></a>
           </div>
         </div>
       </li>
@@ -117,9 +117,16 @@
         <div id="collapseMarks" class="collapse" aria-labelledby="headingMarks" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Select Mark:</h6>
-            <a class="collapse-item" href="#" onclick="selectTableau('State',['New York','Pennsylvania','Virginia'])">East</a>
-            <a class="collapse-item" href="#" onclick="selectTableau('State',['Kansas','Texas','Nebraska'])">Central</a>
-            <a class="collapse-item" href="#" onclick="selectTableau('State',['Nevada','California'])">West</a>
+            <!-- Lesson 3_3 -->
+            <!-- We need to send some values to the function selectTableau() -->
+            <!-- These values will 'select' in Tableau just like you could do by clicking -->
+            <!-- Multiple values can be sent together in an array ot values -->
+            <!-- We're working on the Sale Map to these values will be states -->
+            <!-- Enter a couple of states in the empty arrays in the next 3 lines -->
+            <!-- eg the format will look like selectTableau('State',['Washington','California']) -->
+            <a class="collapse-item" href="#" onclick="selectTableau('State',[])">East</a>
+            <a class="collapse-item" href="#" onclick="selectTableau('State',[])">Central</a>
+            <a class="collapse-item" href="#" onclick="selectTableau('State',[])">West</a>
             <a class="collapse-item" href="#" onclick="selectClear()">Clear Selections</a>
           </div>
         </div>
@@ -361,8 +368,8 @@
                 <div class="card-body flex-column">
                   <div id="vizContainer">
                     <tableau-viz id="tableauViz"
-                      src= "{{tabServer + '/views/tc_viz/Original'}}"
-                        device="desktop" toolbar="hidden" hide-tabs width="1000px">
+                      src= "{{tabServer + '/views/tc_viz/MyTCDash'}}"
+                        device="desktop" toolbar="hidden" hide-tabs width="100%">
                     </tableau-viz>
                   </div>
                   <div id='eventMark'></div>
@@ -386,7 +393,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+            <span>Copyright &copy; TC 2022</span>
           </div>
         </div>
       </footer>

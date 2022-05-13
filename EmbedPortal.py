@@ -75,18 +75,24 @@ def getJWT():
         print(username)
         CA_SSO_token = jwt.encode(
             {
-                "iss": 'ff3ad96c-1d60-4ff2-89ee-02e99fe551ad',
+                # Lesson 2
+                # https://help.tableau.com/current/online/en-us/connected_apps.htm#step-3-configure-the-jwt
+                # Set iss (Issuer) to Connected App Client ID
+                "iss": 'connectedAppClientId',
                 "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=10),
                 "jti": str(uuid.uuid4()),
                 "aud": "tableau",
                 "sub": username,
                 "scp": ["tableau:views:embed", "tableau:metrics:embed"]
             },
-            '0/oP45C+hQ8YY8+EZs/I6+SbTCU+BVYnlimq7fkRHk0=',
+            # Set this value to the Connected App Secret Key 
+            'connectedAppSecretKey',
             algorithm="HS256",
             headers={
-                'kid': '784f8c48-e657-4245-b887-8bbd45bd40f0',
-                'iss': 'ff3ad96c-1d60-4ff2-89ee-02e99fe551ad'
+                # Set kid (Key ID) to Connected App Secret ID
+                'kid': 'connectedAppSecretId',
+                # Set iss (Issuer) to Connected App Client ID
+                'iss': 'connectedAppClientId'
             }
         )
 
