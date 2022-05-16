@@ -8,7 +8,7 @@ window.onload = function () {
    // Lesson 3_4
    // We need to add an event listener to the viz
    // This is just like the event listener just above which fires when the viz has loaded
-   // this time we'll use "marksselectionchanged"
+   // this time we'll use "markselectionchanged"
    // and we want to fire the function getSelectedMarks
 
    
