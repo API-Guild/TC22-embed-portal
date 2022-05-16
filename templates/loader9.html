@@ -10,18 +10,14 @@
 </head>
 
 <body class="demo">
-	Welcome
-	{{username}}
+
 	<!-- Demo content -->
 	<div id="demo-content">
 		<div id="loader-wrapper">
 			<div id="loader">
-				You have sucessfully created a JWT:
-				{{CA_SSO_token}}
 						<tableau-viz id="tableauViz"
-      				src="{{tabServer + '/views/RedirectPage/Dashboard1.png'}}" height="0" toolbar="hidden"
-        			token='{{CA_SSO_token}}'
-					device="phone" toolbar="bottom" hide-tabs>
+      				src="{{tabServer + '/views/RedirectPage/Dashboard1.png'}}" height="0"
+        			token='{{CA_SSO_token}}'>
     			</tableau-viz>
 			</div>
 			<div class="loader-section section-left"></div>

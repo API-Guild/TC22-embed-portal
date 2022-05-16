@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>TC22 - Embedding Session test tim</title>
+  <title>TC22 - Embedding Session</title>
 
   <!-- Custom fonts for this template-->
   <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,16 +19,74 @@
   <!-- Custom styles for this template-->
   <link href="static/css/sb-admin-2.min.css" rel="stylesheet">
 
+  <style>
+    .container2 {
+      position: relative;
+      text-align: center;
+      color: black;
+      background-color: rgb(87,110,178);
+    }
+    
+    /* Top left text */
+    .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+
+    .items-h {
+      position: absolute;
+      top: 150px;
+      left: 50px;
+      color: white;
+      list-style-type: none;
+      font-weight: bold;
+    }
+
+    .items {
+      position: absolute;
+      color: white;
+      list-style: none;
+      text-decoration: none;
+      text-align: left;
+    }
+    a:link, a:visited, a:active {
+      color: white; 
+      list-style: none;
+      text-decoration: none
+    }
+    a:hover {
+      color: rgb(207,233,254);
+      list-style: none;
+      text-decoration: none
+    }
+    h1 {
+      font-weight: bold;
+    }
+    body {
+      background-color: rgb(87,110,178);
+    }
+  </style>
+
 </head>
 
 <body>
 
-  Welcome to tc22 stuffs
-
-</p><a href="/lesson1">part 1 - simple embed using v3</a>
-</p><a href="/login2">part 2 - connected apps login</a>
-</p><a href="/login3">part 3 - advanced v3</a>
-</p><a href="/login9">part 4 - complete solution</a>
+  <div class="container2">
+    <img src="static/img/tc22-home-hero-foreground_v4.png" style="width:100%;">
+    <div class="top-left">
+      <img src="static/img/TC22_logo_blue_370x91.png" style="width:100%;">
+    </div>
+    <div class="items-h">
+      <h1>Embedded Hands On Training Menu</h1>
+      <ul class="items">
+        <li><a href="/lesson1"><h2>Lesson 1 : Simple Embedding</h2></a></li>
+        <li><a href="/login2"><h2>Lesson 2 : Connected Apps</h2></a></li>
+        <li><a href="/login3"><h2>Lesson 3 : Advanced APIv3</h2></a></li>
+        <li><a href="/login9"><h2>Lesson 4 : Complete Solution</h2></a></li>
+    </ul>
+    </div>
+  </div>
 
 
 </body>
